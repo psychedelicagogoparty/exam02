@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -32,11 +33,32 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise'
+#管理画面用
+gem 'rails_admin'
+gem 'cancan'
 
+#ユーザー認証用
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+
+gem 'rspec-rails'
+gem 'factory_girl'
+
+
+#画像のアップローダー
+gem 'carrierwave'
+gem 'mini_magick'
+
+#デザイン
+gem 'twitter-bootstrap-rails'
+gem 'rails_12factor', group: :production
+
+#開発環境及びテスト環境用のgem
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
   gem 'pry-rails'
 end
 
@@ -47,6 +69,7 @@ group :development do
   gem 'letter_opener_web'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'dotenv-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
-
-gem 'rails_12factor', group: :production
